@@ -397,3 +397,7 @@
     font-size: 0.8rem;
   }
 }
+.modal-body img {
+  max-height: 80vh;
+  object-fit: contain;
+}
