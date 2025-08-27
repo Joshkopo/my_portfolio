@@ -462,7 +462,6 @@ h2 {
     transform: translateY(-20px) rotate(180deg);
   }
 }
-
 .image-wrapper {
   position: relative;
   width: 100%;
@@ -474,6 +473,24 @@ h2 {
   justify-content: center;
   align-items: flex-end; /* Image will rise up */
   overflow: visible; /* allow image to go beyond box */
+
+  /* initial state */
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+}
+.image-wrapper.animate-wrapper {
+  animation: wrapperSlideLeft 1s ease-out forwards;
+}
+
+@keyframes wrapperSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
 }
 
 .image-box {
@@ -865,4 +882,61 @@ h2 {
   .loading-bar {
     width: 150px;
   }
+}
+/* Heavy Smooth Scrolling */
+html {
+  scroll-behavior: auto; /* Disable default smooth scroll */
+}
+
+body {
+  overflow: hidden; /* Hide scrollbar for smooth effect */
+  height: 100vh;
+}
+
+/* Smooth scrolling container */
+.smooth-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.smooth-content {
+  pointer-events: auto;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Ensure nav stays on top */
+.nav-container {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+/* Ensure all interactive elements work */
+a,
+button,
+input,
+select,
+textarea,
+.btn,
+.nav-item,
+.project-card,
+.contact-link {
+  pointer-events: auto !important;
+}
+
+/* Fix hover states */
+.info-card:hover,
+.skill-item:hover,
+.timeline-content:hover,
+.project-card:hover,
+.contact-link:hover,
+.btn:hover,
+.nav-item:hover {
+  pointer-events: auto !important;
 }

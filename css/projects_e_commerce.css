@@ -12,17 +12,25 @@
   transform: translateY(50px);
   animation: fadeInUp 1s ease-out forwards;
 }
-
 .projects-title {
   font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 3rem;
   text-align: center;
-  background: linear-gradient(135deg, #fff 0%, #ccc 100%);
+
+  /* Gradient text */
+  background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+
+  /* Fallback for browsers that don’t support background-clip */
+  color: #ffffff;
+
+  /* Make text stand out */
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+
   position: relative;
 }
 
@@ -31,14 +39,15 @@
   position: absolute;
   bottom: -15px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scaleX(0);
   width: 100px;
   height: 4px;
-  background: linear-gradient(135deg, #fff 0%, #ccc 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
   border-radius: 2px;
+
+  /* underline animation */
   animation: expandLine 1s ease-out 0.5s forwards;
   transform-origin: center;
-  transform: translateX(-50%) scaleX(0);
 }
 
 .projects-grid {

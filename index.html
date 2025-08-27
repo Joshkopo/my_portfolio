@@ -24,71 +24,12 @@
     <link rel="stylesheet" href="css/nav.css" />
   </head>
   <body>
-    <style>
-      /* Heavy Smooth Scrolling */
-      html {
-        scroll-behavior: auto; /* Disable default smooth scroll */
-      }
-
-      body {
-        overflow: hidden; /* Hide scrollbar for smooth effect */
-        height: 100vh;
-      }
-
-      /* Smooth scrolling container */
-      .smooth-wrapper {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        z-index: 1;
-      }
-
-      .smooth-content {
-        pointer-events: auto;
-        will-change: transform;
-        transform: translate3d(0, 0, 0);
-      }
-
-      /* Ensure nav stays on top */
-      .nav-container {
-        position: fixed;
-        z-index: 1000;
-        pointer-events: auto;
-      }
-
-      /* Ensure all interactive elements work */
-      a,
-      button,
-      input,
-      select,
-      textarea,
-      .btn,
-      .nav-item,
-      .project-card,
-      .contact-link {
-        pointer-events: auto !important;
-      }
-
-      /* Fix hover states */
-      .info-card:hover,
-      .skill-item:hover,
-      .timeline-content:hover,
-      .project-card:hover,
-      .contact-link:hover,
-      .btn:hover,
-      .nav-item:hover {
-        pointer-events: auto !important;
-      }
-    </style>
     <div class="preloader" id="preloader">
       <div class="preloader-content">
         <div class="preloader-name">Joshua Dela Cruz</div>
         <div class="preloader-role">Web Developer</div>
         <div class="preloader-tagline">
-          Crafting digital experiences<span class="dots"></span>
+          Creating Impact Through Code<span class="dots"></span>
         </div>
         <div class="loading-bar">
           <div class="loading-progress"></div>
@@ -323,7 +264,8 @@
 
           <div class="container">
             <div class="projects-content">
-              <h2 class="projects-title">My Projects</h2>
+              <h2 class="projects-title animate-on-scroll">MY PROJECTS</h2>
+
               <div class="projects-grid">
                 <!-- Project Card 1 -->
                 <div class="project-card">
@@ -361,7 +303,13 @@
                   <div class="project-image">
                     <img src="img/is.jpg" alt="Inventory System" />
                     <div class="project-overlay">
-                      <button class="view-project-btn">View Project</button>
+                      <a
+                        href="project_inventory.html"
+                        class="view-project-btn"
+                        style="text-decoration: none"
+                      >
+                        View Project
+                      </a>
                     </div>
                   </div>
                   <div class="project-content">
@@ -445,11 +393,702 @@
             </div>
           </div>
         </section>
+        <!-- Contact Section HTML -->
+        <section class="contact-section" id="contact">
+          <div class="container">
+            <div class="contact-wrapper">
+              <!-- Header -->
+              <div class="contact-header">
+                <h3 class="contact-title">Let's Connect</h3>
+                <div class="title-line"></div>
+              </div>
+
+              <!-- Contact Cards -->
+              <div class="contact-grid">
+                <div class="contact-card email-card">
+                  <div class="card-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="card-content">
+                    <span class="card-label">Email</span>
+                    <a href="mailto:delacruzowa285@gmail.com" class="card-link">
+                      delacruzowa285@gmail.com
+                    </a>
+                  </div>
+                  <div class="card-hover-effect"></div>
+                </div>
+
+                <div class="contact-card phone-card">
+                  <div class="card-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="card-content">
+                    <span class="card-label">Phone</span>
+                    <a href="tel:+639152217372" class="card-link">
+                      +639152217372
+                    </a>
+                  </div>
+                  <div class="card-hover-effect"></div>
+                </div>
+
+                <div class="contact-card location-card">
+                  <div class="card-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="card-content">
+                    <span class="card-label">Location</span>
+                    <span class="card-text">Abucay, Bataan</span>
+                  </div>
+                  <div class="card-hover-effect"></div>
+                </div>
+              </div>
+
+              <!-- Social Media -->
+              <div class="social-section">
+                <div class="social-line"></div>
+                <div class="social-icons">
+                  <a
+                    href="https://www.facebook.com/JSHMNLDLCRZ"
+                    class="social-link facebook"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                    <span class="social-tooltip">Facebook</span>
+                  </a>
+                  <a href="#" class="social-link twitter">
+                    <i class="fab fa-twitter"></i>
+                    <span class="social-tooltip">Twitter</span>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/joshnyopo/"
+                    class="social-link instagram"
+                  >
+                    <i class="fab fa-instagram"></i>
+                    <span class="social-tooltip">Instagram</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/joshua-dela-cruz-51918135b/"
+                    class="social-link linkedin"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                    <span class="social-tooltip">LinkedIn</span>
+                  </a>
+                </div>
+                <div class="social-line"></div>
+              </div>
+
+              <!-- CTA Button -->
+              <div class="cta-section">
+                <a href="mailto:joshua.delacruz@email.com" class="cta-button">
+                  <span class="cta-text">Start a Conversation</span>
+                  <div class="cta-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Elements -->
+          <div class="floating-dot dot-1"></div>
+          <div class="floating-dot dot-2"></div>
+          <div class="floating-dot dot-3"></div>
+        </section>
+
+        <style>
+          .contact-section {
+            min-height: 100vh;
+            background: linear-gradient(
+              135deg,
+              #0f0f0f 0%,
+              #1a1a1a 50%,
+              #000 100%
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            font-family: "Poppins", sans-serif;
+            color: #fff;
+            padding: 2rem;
+          }
+          .contact-wrapper {
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+          }
+
+          /* Header Styles */
+          .contact-header {
+            margin-bottom: 4rem;
+          }
+
+          .contact-title {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            color: #fff;
+            opacity: 0;
+            animation: slideInDown 0.8s ease-out 0.2s forwards;
+          }
+
+          .title-line {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #fff, transparent);
+            margin: 0 auto;
+            opacity: 0;
+            animation: expandLine 1s ease-out 0.6s forwards;
+          }
+
+          /* Contact Cards */
+          .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+          }
+
+          .contact-card {
+            position: relative;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+          }
+
+          .contact-card:nth-child(1) {
+            animation: slideInUp 0.6s ease-out 0.8s forwards;
+          }
+
+          .contact-card:nth-child(2) {
+            animation: slideInUp 0.6s ease-out 1s forwards;
+          }
+
+          .contact-card:nth-child(3) {
+            animation: slideInUp 0.6s ease-out 1.2s forwards;
+          }
+
+          .contact-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.05);
+          }
+
+          .contact-card:hover .card-hover-effect {
+            opacity: 1;
+            transform: scale(1);
+          }
+
+          .card-hover-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(
+              circle at center,
+              rgba(255, 255, 255, 0.03),
+              transparent 70%
+            );
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.4s ease;
+            pointer-events: none;
+          }
+
+          .card-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            transition: all 0.3s ease;
+          }
+
+          .card-icon i {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+          }
+
+          .contact-card:hover .card-icon {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.1);
+          }
+
+          .contact-card:hover .card-icon i {
+            color: #fff;
+          }
+
+          .card-content {
+            text-align: center;
+          }
+
+          .card-label {
+            display: block;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+          }
+
+          .card-link,
+          .card-text {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+          }
+
+          .card-link:hover {
+            color: #fff;
+          }
+
+          /* Social Media Section */
+          .social-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3rem;
+            gap: 2rem;
+            opacity: 0;
+            animation: fadeIn 0.6s ease-out 1.4s forwards;
+          }
+
+          .social-line {
+            width: 60px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+          }
+
+          .social-icons {
+            display: flex;
+            gap: 1rem;
+          }
+
+          .social-link {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+          }
+
+          .social-link:hover {
+            transform: translateY(-3px) scale(1.1);
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.3);
+          }
+
+          .social-link.facebook:hover {
+            background: rgba(24, 119, 242, 0.2);
+            border-color: #1877f2;
+          }
+
+          .social-link.twitter:hover {
+            background: rgba(29, 161, 242, 0.2);
+            border-color: #1da1f2;
+          }
+
+          .social-link.instagram:hover {
+            background: rgba(228, 64, 95, 0.2);
+            border-color: #e4405f;
+          }
+
+          .social-link.linkedin:hover {
+            background: rgba(0, 119, 181, 0.2);
+            border-color: #0077b5;
+          }
+
+          .social-tooltip {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            white-space: nowrap;
+          }
+
+          .social-link:hover .social-tooltip {
+            opacity: 1;
+            visibility: visible;
+            top: -40px;
+          }
+
+          /* CTA Button */
+          .cta-section {
+            opacity: 0;
+            animation: slideInUp 0.6s ease-out 1.6s forwards;
+          }
+
+          .cta-button {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            overflow: hidden;
+          }
+
+          .cta-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              90deg,
+              transparent,
+              rgba(255, 255, 255, 0.1),
+              transparent
+            );
+            transition: left 0.6s ease;
+          }
+
+          .cta-button:hover::before {
+            left: 100%;
+          }
+
+          .cta-button:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+          }
+
+          .cta-arrow {
+            transition: transform 0.3s ease;
+          }
+
+          .cta-button:hover .cta-arrow {
+            transform: translateX(5px);
+          }
+
+          /* Floating Elements */
+          .floating-dot {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+          }
+
+          .dot-1 {
+            top: 20%;
+            left: 10%;
+            animation: float 6s ease-in-out infinite;
+          }
+
+          .dot-2 {
+            top: 70%;
+            right: 15%;
+            animation: float 8s ease-in-out infinite reverse;
+          }
+
+          .dot-3 {
+            bottom: 30%;
+            left: 20%;
+            animation: float 10s ease-in-out infinite;
+          }
+
+          /* Animations */
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          @keyframes slideInDown {
+            from {
+              opacity: 0;
+              transform: translateY(-30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          @keyframes slideInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+
+          @keyframes expandLine {
+            from {
+              opacity: 0;
+              width: 0;
+            }
+            to {
+              opacity: 1;
+              width: 60px;
+            }
+          }
+
+          @keyframes float {
+            0%,
+            100% {
+              transform: translateY(0px);
+            }
+            50% {
+              transform: translateY(-20px);
+            }
+          }
+
+          /* Responsive Design */
+          @media (max-width: 768px) {
+            .contact-title {
+              font-size: 2.2rem;
+            }
+
+            .contact-grid {
+              grid-template-columns: 1fr;
+              gap: 1.5rem;
+            }
+
+            .social-section {
+              flex-direction: column;
+              gap: 1rem;
+            }
+
+            .social-line {
+              width: 40px;
+            }
+
+            .cta-button {
+              padding: 0.8rem 2rem;
+              font-size: 0.9rem;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .contact-section {
+              padding: 1rem;
+            }
+
+            .contact-title {
+              font-size: 1.8rem;
+            }
+
+            .contact-card {
+              padding: 1.5rem;
+            }
+          }
+        </style>
       </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      // Heavy Smooth Scrolling Implementation
+      /* ================================
+     SCROLL ANIMATIONS (Fade-in)
+     Uses IntersectionObserver
+  ==================================*/
+      const observerOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -280px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+          }
+        });
+      }, observerOptions);
+
+      // Optional: Observe contact section for scroll animations
+      document.addEventListener("DOMContentLoaded", () => {
+        const contactSection = document.querySelector(".contact-section");
+        if (contactSection) {
+          observer.observe(contactSection);
+        }
+      });
+      /* ================================
+     INITIALIZATION ON DOM LOAD
+  ==================================*/
+      document.addEventListener("DOMContentLoaded", () => {
+        // Start custom smooth scroll
+        new SmoothScroll();
+
+        // Apply animations on scroll
+        const elementsToAnimate =
+          document.querySelectorAll(".animate-on-scroll");
+        elementsToAnimate.forEach((el) => observer.observe(el));
+      });
+
+      /* Prevent default browser scrolling */
+      document.addEventListener("wheel", (e) => e.preventDefault(), {
+        passive: false,
+      });
+
+      /* ================================
+     BOOTSTRAP TOOLTIPS INITIALIZATION
+  ==================================*/
+      document.addEventListener("DOMContentLoaded", () => {
+        const tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        tooltipTriggerList.map(
+          (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+        );
+      });
+
+      /* ================================
+     PRELOADER & HOME ANIMATIONS
+  ==================================*/
+      window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+
+        // Fade out after 4.5s
+        setTimeout(() => {
+          preloader.classList.add("fade-out");
+          setTimeout(() => {
+            preloader.style.display = "none";
+            startHomeAnimations(); // trigger home section
+          }, 800);
+        }, 4500);
+      });
+
+      // Safety fallback: hide preloader after 6s
+      setTimeout(() => {
+        const preloader = document.getElementById("preloader");
+        if (preloader) {
+          preloader.classList.add("fade-out");
+          setTimeout(() => {
+            preloader.style.display = "none";
+            startHomeAnimations();
+          }, 800);
+        }
+      }, 6000);
+
+      /* HOME SECTION ANIMATIONS */
+      function startHomeAnimations() {
+        const secondCol = document.querySelector(".second-col");
+        const role = document.querySelector(".role");
+        const title = document.querySelector("#home h2");
+        const tagline = document.querySelector(".tagline");
+        const buttonsContainer = document.querySelector(".buttons-container");
+        const buttons = document.querySelectorAll(".btn");
+        const image = document.querySelector(".image-box img");
+        const imageWrapper = document.querySelector(".image-wrapper");
+
+        // Animate column
+        if (secondCol) {
+          setTimeout(() => secondCol.classList.add("animate-second-col"), 100);
+        }
+
+        // Animate image
+        if (image) {
+          setTimeout(() => image.classList.add("animate-image"), 300);
+        }
+
+        // Animate role with line effect
+        if (role) {
+          setTimeout(() => {
+            role.classList.add("animate-role");
+            setTimeout(() => {
+              const style = document.createElement("style");
+              style.textContent = `.role::after { animation: lineExpand 0.8s ease-out forwards; }`;
+              document.head.appendChild(style);
+            }, 800);
+          }, 600);
+        }
+
+        // Animate image wrapper
+        if (imageWrapper) {
+          setTimeout(() => imageWrapper.classList.add("animate-wrapper"), 200);
+        }
+
+        // Animate title
+        if (title) {
+          setTimeout(() => title.classList.add("animate-title"), 900);
+        }
+
+        // Animate tagline with shimmer
+        if (tagline) {
+          setTimeout(() => {
+            tagline.classList.add("animate-tagline");
+            setTimeout(() => {
+              const style = document.createElement("style");
+              style.textContent = `.tagline::before { animation: shimmer 2s infinite; }`;
+              document.head.appendChild(style);
+            }, 800);
+          }, 1500);
+        }
+
+        // Animate button container
+        if (buttonsContainer) {
+          setTimeout(
+            () => buttonsContainer.classList.add("animate-buttons"),
+            1700
+          );
+        }
+
+        // Animate buttons individually
+        buttons.forEach((btn, index) => {
+          setTimeout(() => {
+            btn.classList.add(index === 0 ? "animate-btn-1" : "animate-btn-2");
+          }, 1800 + index * 200);
+        });
+      }
+
+      /* ================================
+     SMOOTH SCROLLING SYSTEM
+     Handles heavy smooth scrolling
+  ==================================*/
       class SmoothScroll {
         constructor() {
           this.scrollElement = document.getElementById("smooth-content");
@@ -470,20 +1109,17 @@
         }
 
         bindEvents() {
-          // Mouse wheel with momentum
+          /* Mouse wheel scrolling with momentum */
           window.addEventListener(
             "wheel",
             (e) => {
               e.preventDefault();
-
-              // Heavy scrolling multiplier
-              const delta = e.deltaY * 1.2;
+              const delta = e.deltaY * 1.2; // heaviness multiplier
               this.targetY += delta;
               this.targetY = Math.max(
                 0,
                 Math.min(this.maxScroll, this.targetY)
               );
-
               this.isScrolling = true;
               clearTimeout(this.scrollTimeout);
               this.scrollTimeout = setTimeout(() => {
@@ -493,15 +1129,11 @@
             { passive: false }
           );
 
-          // Touch events for mobile
+          /* Touch scrolling for mobile devices */
           let touchStartY = 0;
-          window.addEventListener(
-            "touchstart",
-            (e) => {
-              touchStartY = e.touches[0].clientY;
-            },
-            { passive: true }
-          );
+          window.addEventListener("touchstart", (e) => {
+            touchStartY = e.touches[0].clientY;
+          });
 
           window.addEventListener(
             "touchmove",
@@ -520,12 +1152,10 @@
           );
 
           window.addEventListener("touchend", () => {
-            setTimeout(() => {
-              this.isScrolling = false;
-            }, 150);
+            setTimeout(() => (this.isScrolling = false), 150);
           });
 
-          // Keyboard navigation
+          /* Keyboard navigation (Arrow keys, Home/End, Space) */
           window.addEventListener("keydown", (e) => {
             switch (e.key) {
               case "ArrowDown":
@@ -549,13 +1179,13 @@
             this.targetY = Math.max(0, Math.min(this.maxScroll, this.targetY));
           });
 
-          // Resize handler
+          /* Window resize (recalculate scroll area) */
           window.addEventListener("resize", () => {
             this.maxScroll =
               this.scrollElement.scrollHeight - window.innerHeight;
           });
 
-          // Handle nav clicks
+          /* Navigation click-to-scroll */
           document.querySelectorAll(".nav-item").forEach((item) => {
             item.addEventListener("click", (e) => {
               e.preventDefault();
@@ -573,159 +1203,16 @@
         }
 
         render() {
-          // Smooth interpolation with easing
+          // Smooth interpolation (easing)
           const diff = this.targetY - this.currentY;
           this.currentY += diff * this.ease;
 
-          // Apply transform
+          // Apply transform to smooth-content
           this.scrollElement.style.transform = `translate3d(0, -${this.currentY}px, 0)`;
 
-          // Continue animation loop
+          // Loop continuously
           requestAnimationFrame(() => this.render());
         }
-      }
-
-      // Intersection Observer for scroll animations
-      const observerOptions = {
-        threshold: 0.2,
-        rootMargin: "0px 0px -280px 0px",
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-in");
-          }
-        });
-      }, observerOptions);
-
-      // Initialize when DOM is loaded
-      document.addEventListener("DOMContentLoaded", () => {
-        // Initialize smooth scrolling
-        new SmoothScroll();
-
-        // Initialize scroll animations
-        const elementsToAnimate =
-          document.querySelectorAll(".animate-on-scroll");
-        elementsToAnimate.forEach((el) => observer.observe(el));
-      });
-
-      // Prevent default scrolling
-      document.addEventListener(
-        "wheel",
-        (e) => {
-          e.preventDefault();
-        },
-        { passive: false }
-      );
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const tooltipTriggerList = [].slice.call(
-          document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        );
-        tooltipTriggerList.map((tooltipTriggerEl) => {
-          return new bootstrap.Tooltip(tooltipTriggerEl);
-        });
-      });
-    </script>
-    <script>
-      // Enhanced preloader with home section animation trigger
-      window.addEventListener("load", () => {
-        const preloader = document.getElementById("preloader");
-
-        // Wait for preloader animations to complete, then fade out
-        setTimeout(() => {
-          preloader.classList.add("fade-out");
-
-          // Remove preloader from DOM and start home animations
-          setTimeout(() => {
-            preloader.style.display = "none";
-            startHomeAnimations(); // Trigger home section animations
-          }, 800);
-        }, 4500); // Total preloader time: 4.5 seconds
-      });
-
-      // Fallback: Hide preloader after 6 seconds regardless
-      setTimeout(() => {
-        const preloader = document.getElementById("preloader");
-        if (preloader) {
-          preloader.classList.add("fade-out");
-          setTimeout(() => {
-            preloader.style.display = "none";
-            startHomeAnimations(); // Trigger home animations
-          }, 800);
-        }
-      }, 6000);
-
-      // Function to start home section animations
-      function startHomeAnimations() {
-        // Get all the elements
-        const secondCol = document.querySelector(".second-col");
-        const role = document.querySelector(".role");
-        const roleAfter = document.querySelector(".role::after");
-        const title = document.querySelector("#home h2");
-        const tagline = document.querySelector(".tagline");
-        const taglineBefore = document.querySelector(".tagline::before");
-        const buttonsContainer = document.querySelector(".buttons-container");
-        const buttons = document.querySelectorAll(".btn");
-        const image = document.querySelector(".image-box img");
-
-        // Start animations with proper timing
-        if (secondCol) {
-          setTimeout(() => secondCol.classList.add("animate-second-col"), 100);
-        }
-
-        if (image) {
-          setTimeout(() => image.classList.add("animate-image"), 300);
-        }
-
-        if (role) {
-          setTimeout(() => {
-            role.classList.add("animate-role");
-            // Animate the role line
-            setTimeout(() => {
-              role.style.setProperty(
-                "--after-animation",
-                "lineExpand 0.8s ease-out forwards"
-              );
-              const style = document.createElement("style");
-              style.textContent = `.role::after { animation: lineExpand 0.8s ease-out forwards; }`;
-              document.head.appendChild(style);
-            }, 800);
-          }, 600);
-        }
-
-        if (title) {
-          setTimeout(() => title.classList.add("animate-title"), 900);
-        }
-
-        if (tagline) {
-          setTimeout(() => {
-            tagline.classList.add("animate-tagline");
-            // Add shimmer effect
-            setTimeout(() => {
-              const style = document.createElement("style");
-              style.textContent = `.tagline::before { animation: shimmer 2s infinite; }`;
-              document.head.appendChild(style);
-            }, 800);
-          }, 1500);
-        }
-
-        if (buttonsContainer) {
-          setTimeout(
-            () => buttonsContainer.classList.add("animate-buttons"),
-            1700
-          );
-        }
-
-        // Animate buttons individually
-        buttons.forEach((btn, index) => {
-          setTimeout(() => {
-            btn.classList.add(index === 0 ? "animate-btn-1" : "animate-btn-2");
-          }, 1800 + index * 200);
-        });
       }
     </script>
   </body>

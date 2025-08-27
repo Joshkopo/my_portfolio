@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-commerce Project Showcase</title>
+    <title>Inventory Project Showcase</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,10 +18,9 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/about_section.css" />
     <link rel="stylesheet" href="css/hero_section.css" />
-    <link rel="stylesheet" href="css/projects_e_commerce.css" />
     <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/projects_e_commerce.css" />
   </head>
   <body>
     <div class="nav-container">
@@ -90,34 +89,33 @@
           <div class="container">
             <div class="projects-content">
               <h1 class="projects-title animate-on-scroll">
-                E-commerce Project Showcase
+                Inventory Project Showcase
               </h1>
 
               <div class="projects-grid">
-                <!-- Project 1 -->
+                <!-- Dashboard -->
                 <div class="project-card">
                   <div class="project-image">
-                    <img src="e_commerce/home.jpg" alt="E-commerce Project 1" />
+                    <img src="inventory/dashboard.jpg" alt="Dashboard" />
                     <div class="project-overlay">
                       <button
                         class="view-project-btn"
                         data-bs-toggle="modal"
-                        data-bs-target="#projectModal1"
+                        data-bs-target="#projectDashboard"
                       >
                         View Project
                       </button>
                     </div>
                   </div>
                   <div class="project-content">
-                    <h3 class="project-title">Homepage</h3>
+                    <h3 class="project-title">Dashboard</h3>
                     <p class="project-description">
-                      Modern homepage with bold visuals and simple navigation.
+                      Analytics cards, low-stock alerts, activity logs & trends.
                     </p>
-
                     <div class="project-tech">
-                      <span class="tech-tag">HTML</span>
-                      <span class="tech-tag">CSS</span>
-                      <span class="tech-tag">Bootstrap</span>
+                      <span class="tech-tag">PHP</span
+                      ><span class="tech-tag">MySQL</span
+                      ><span class="tech-tag">Bootstrap</span>
                     </div>
                   </div>
                 </div>
@@ -126,54 +124,50 @@
                 <!-- Project 2 -->
                 <div class="project-card">
                   <div class="project-image">
-                    <img src="e_commerce/shop.jpg" alt="E-commerce Project 2" />
+                    <img src="inventory/inventory.jpg" alt="Manage Items" />
                     <div class="project-overlay">
                       <button
                         class="view-project-btn"
                         data-bs-toggle="modal"
-                        data-bs-target="#projectModal2"
+                        data-bs-target="#projectItems"
                       >
                         View Project
                       </button>
                     </div>
                   </div>
                   <div class="project-content">
-                    <h3 class="project-title">Product Catalog</h3>
+                    <h3 class="project-title">Manage Items</h3>
                     <p class="project-description">
-                      Clean product grid with filters, categories, and quick
-                      add-to-cart.
+                      All inventory items with add, edit, and stock management.
                     </p>
-
                     <div class="project-tech">
-                      <span class="tech-tag">PHP</span>
-                      <span class="tech-tag">MySQL</span>
+                      <span class="tech-tag">PHP</span
+                      ><span class="tech-tag">MySQL</span>
                     </div>
                   </div>
                 </div>
 
                 <div class="project-card">
                   <div class="project-image">
-                    <img src="e_commerce/pos.jpg" alt="E-commerce Project 3" />
+                    <img src="inventory/item.jpg" alt="Item Details" />
                     <div class="project-overlay">
                       <button
                         class="view-project-btn"
                         data-bs-toggle="modal"
-                        data-bs-target="#projectModal3"
+                        data-bs-target="#projectDetails"
                       >
                         View Project
                       </button>
                     </div>
                   </div>
                   <div class="project-content">
-                    <h3 class="project-title">POS</h3>
+                    <h3 class="project-title">Item Details</h3>
                     <p class="project-description">
-                      Streamlined POS for walk-in sales with fast checkout.
+                      Detailed view with stock add/remove & update info.
                     </p>
-
                     <div class="project-tech">
-                      <span class="tech-tag">HTML</span>
-                      <span class="tech-tag">CSS</span>
-                      <span class="tech-tag">Bootstrap</span>
+                      <span class="tech-tag">PHP</span
+                      ><span class="tech-tag">Bootstrap</span>
                     </div>
                   </div>
                 </div>
@@ -181,55 +175,79 @@
               <div class="projects-grid">
                 <div class="project-card">
                   <div class="project-image">
-                    <img src="e_commerce/b.jpg" alt="E-commerce Project 4" />
+                    <img src="inventory/manage_ass.jpg" alt="Assignments" />
                     <div class="project-overlay">
                       <button
                         class="view-project-btn"
                         data-bs-toggle="modal"
-                        data-bs-target="#projectModal4"
+                        data-bs-target="#projectAssignments"
                       >
                         View Project
                       </button>
                     </div>
                   </div>
                   <div class="project-content">
-                    <h3 class="project-title">Appointment Booking</h3>
+                    <h3 class="project-title">Manage Assignments</h3>
                     <p class="project-description">
-                      Easy booking flow to choose artist, service, and schedule.
+                      Assign & return items to SSG officers with status
+                      tracking.
                     </p>
-
                     <div class="project-tech">
-                      <span class="tech-tag">HTML</span>
-                      <span class="tech-tag">CSS</span>
-                      <span class="tech-tag">Bootstrap</span>
+                      <span class="tech-tag">PHP</span
+                      ><span class="tech-tag">MySQL</span>
                     </div>
                   </div>
                 </div>
 
+                <!-- Users -->
                 <div class="project-card">
                   <div class="project-image">
-                    <img src="e_commerce/d1.jpg" alt="E-commerce Project 5" />
+                    <img src="inventory/user_mgmt.jpg" alt="User Management" />
                     <div class="project-overlay">
                       <button
                         class="view-project-btn"
                         data-bs-toggle="modal"
-                        data-bs-target="#projectModal5"
+                        data-bs-target="#projectUsers"
                       >
                         View Project
                       </button>
                     </div>
                   </div>
                   <div class="project-content">
-                    <h3 class="project-title">Admin & Reports</h3>
+                    <h3 class="project-title">User Management</h3>
                     <p class="project-description">
-                      Minimal dashboard with sales, inventory, and appointment
-                      insights.
+                      Manage admins and SSG users with role access.
                     </p>
-
                     <div class="project-tech">
-                      <span class="tech-tag">HTML</span>
-                      <span class="tech-tag">CSS</span>
-                      <span class="tech-tag">Bootstrap</span>
+                      <span class="tech-tag">PHP</span
+                      ><span class="tech-tag">Bootstrap</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="projects-grid">
+                <div class="project-card">
+                  <div class="project-image">
+                    <img src="inventory/inventory_report.jpg" alt="Reports" />
+                    <div class="project-overlay">
+                      <button
+                        class="view-project-btn"
+                        data-bs-toggle="modal"
+                        data-bs-target="#projectReports"
+                      >
+                        View Project
+                      </button>
+                    </div>
+                  </div>
+                  <div class="project-content">
+                    <h3 class="project-title">Reports</h3>
+                    <p class="project-description">
+                      Downloadable reports with filters for date, items &
+                      officers.
+                    </p>
+                    <div class="project-tech">
+                      <span class="tech-tag">PHP</span
+                      ><span class="tech-tag">MySQL</span>
                     </div>
                   </div>
                 </div>
@@ -241,7 +259,7 @@
         <!-- Project Modal 1 -->
         <div
           class="modal fade"
-          id="projectModal1"
+          id="projectDashboard"
           tabindex="-1"
           aria-hidden="true"
         >
@@ -256,12 +274,50 @@
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="modal-body text-center">
-                <img
-                  src="e_commerce/home.jpg"
-                  class="img-fluid rounded"
-                  alt="User-Friendly Homepage"
-                />
+              <div class="modal-body">
+                <!-- Carousel -->
+                <div
+                  id="carouselProject1"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                      <img
+                        src="inventory/dashboard.jpg"
+                        class="d-block w-100 rounded"
+                        alt="Product Catalog 1"
+                      />
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                      <img
+                        src="inventory/dashboard1.jpg"
+                        class="d-block w-100 rounded"
+                        alt="Product Catalog 2"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Controls -->
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselProject1"
+                    data-bs-slide="prev"
+                  >
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselProject1"
+                    data-bs-slide="next"
+                  >
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -270,14 +326,14 @@
         <!-- Project Modal 2 -->
         <div
           class="modal fade"
-          id="projectModal2"
+          id="projectItems"
           tabindex="-1"
           aria-hidden="true"
         >
           <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">POS System</h5>
+                <h5 class="modal-title">Manage Items</h5>
                 <button
                   type="button"
                   class="btn-close"
@@ -296,7 +352,7 @@
                     <!-- Slide 1 -->
                     <div class="carousel-item active">
                       <img
-                        src="e_commerce/shop.jpg"
+                        src="inventory/manage_ass.jpg"
                         class="d-block w-100 rounded"
                         alt="Product Catalog 1"
                       />
@@ -304,7 +360,7 @@
                     <!-- Slide 2 -->
                     <div class="carousel-item">
                       <img
-                        src="e_commerce/shop1.jpg"
+                        src="inventory/assign1.jpg"
                         class="d-block w-100 rounded"
                         alt="Product Catalog 2"
                       />
@@ -312,7 +368,7 @@
                     <!-- Slide 3 -->
                     <div class="carousel-item">
                       <img
-                        src="e_commerce/shop2.jpg"
+                        src="inventory/assign2.jpg"
                         class="d-block w-100 rounded"
                         alt="Product Catalog 3"
                       />
@@ -320,7 +376,7 @@
                     <!-- Slide 4 -->
                     <div class="carousel-item">
                       <img
-                        src="e_commerce/cart.jpg"
+                        src="inventory/manage_ass2.jpg"
                         class="d-block w-100 rounded"
                         alt="Product Catalog 4"
                       />
@@ -353,14 +409,14 @@
 
         <div
           class="modal fade"
-          id="projectModal3"
+          id="projectDetails"
           tabindex="-1"
           aria-hidden="true"
         >
           <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">POS System</h5>
+                <h5 class="modal-title">Item Details</h5>
                 <button
                   type="button"
                   class="btn-close"
@@ -379,7 +435,7 @@
                     <!-- Slide 1 -->
                     <div class="carousel-item active">
                       <img
-                        src="e_commerce/pos.jpg"
+                        src="inventory/item.jpg"
                         class="d-block w-100 rounded"
                         alt="Product Catalog 1"
                       />
@@ -387,7 +443,7 @@
                     <!-- Slide 2 -->
                     <div class="carousel-item">
                       <img
-                        src="e_commerce/pos1.jpg"
+                        src="inventory/addstock.jpg"
                         class="d-block w-100 rounded"
                         alt="Product Catalog 2"
                       />
@@ -395,7 +451,7 @@
                     <!-- Slide 3 -->
                     <div class="carousel-item">
                       <img
-                        src="e_commerce/pos2.jpg"
+                        src="inventory/removestock.jpg"
                         class="d-block w-100 rounded"
                         alt="Product Catalog 3"
                       />
@@ -403,7 +459,21 @@
                     <!-- Slide 4 -->
                     <div class="carousel-item">
                       <img
-                        src="e_commerce/pos3.jpg"
+                        src="inventory/edititem.jpg"
+                        class="d-block w-100 rounded"
+                        alt="Product Catalog 4"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="inventory/edithistory.jpg"
+                        class="d-block w-100 rounded"
+                        alt="Product Catalog 4"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="inventory/item2.jpg"
                         class="d-block w-100 rounded"
                         alt="Product Catalog 4"
                       />
@@ -435,14 +505,14 @@
         <!-- Project Modal 4 -->
         <div
           class="modal fade"
-          id="projectModal4"
+          id="projectAssignments"
           tabindex="-1"
           aria-hidden="true"
         >
           <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">Appointment Booking</h5>
+                <h5 class="modal-title">Manage Assignments</h5>
                 <button
                   type="button"
                   class="btn-close"
@@ -461,7 +531,7 @@
                     <!-- Slide 1 -->
                     <div class="carousel-item active">
                       <img
-                        src="e_commerce/b1.jpg"
+                        src="inventory/manage_ass.jpg"
                         class="d-block w-100 rounded"
                         alt="Product Catalog 1"
                       />
@@ -469,7 +539,7 @@
                     <!-- Slide 2 -->
                     <div class="carousel-item">
                       <img
-                        src="e_commerce/b2.jpg"
+                        src="inventory/assign1.jpg"
                         class="d-block w-100 rounded"
                         alt="Product Catalog 2"
                       />
@@ -477,7 +547,7 @@
                     <!-- Slide 3 -->
                     <div class="carousel-item">
                       <img
-                        src="e_commerce/b3.jpg"
+                        src="inventory/assign2.jpg"
                         class="d-block w-100 rounded"
                         alt="Product Catalog 3"
                       />
@@ -485,17 +555,9 @@
                     <!-- Slide 4 -->
                     <div class="carousel-item">
                       <img
-                        src="e_commerce/b4.jpg"
+                        src="inventory/manage_ass2.jpg"
                         class="d-block w-100 rounded"
                         alt="Product Catalog 4"
-                      />
-                    </div>
-                    <!-- Slide 5 -->
-                    <div class="carousel-item">
-                      <img
-                        src="e_commerce/b5.jpg"
-                        class="d-block w-100 rounded"
-                        alt="Product Catalog 5"
                       />
                     </div>
                   </div>
@@ -526,14 +588,14 @@
 
         <div
           class="modal fade"
-          id="projectModal5"
+          id="projectUsers"
           tabindex="-1"
           aria-hidden="true"
         >
           <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">Admin & Reports</h5>
+                <h5 class="modal-title">User Management</h5>
                 <button
                   type="button"
                   class="btn-close"
@@ -552,7 +614,7 @@
                     <!-- Slide 1 -->
                     <div class="carousel-item active">
                       <img
-                        src="e_commerce/d1.jpg"
+                        src="inventory/user_mgmt.jpg"
                         class="d-block w-100 rounded"
                         alt="Product Catalog 1"
                       />
@@ -560,33 +622,9 @@
                     <!-- Slide 2 -->
                     <div class="carousel-item">
                       <img
-                        src="e_commerce/d2.jpg"
+                        src="inventory/add_user.jpg"
                         class="d-block w-100 rounded"
                         alt="Product Catalog 2"
-                      />
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="carousel-item">
-                      <img
-                        src="e_commerce/d3.jpg"
-                        class="d-block w-100 rounded"
-                        alt="Product Catalog 3"
-                      />
-                    </div>
-                    <!-- Slide 4 -->
-                    <div class="carousel-item">
-                      <img
-                        src="e_commerce/d4.jpg"
-                        class="d-block w-100 rounded"
-                        alt="Product Catalog 4"
-                      />
-                    </div>
-                    <!-- Slide 5 -->
-                    <div class="carousel-item">
-                      <img
-                        src="e_commerce/d5.jpg"
-                        class="d-block w-100 rounded"
-                        alt="Product Catalog 5"
                       />
                     </div>
                   </div>
@@ -604,6 +642,93 @@
                     class="carousel-control-next"
                     type="button"
                     data-bs-target="#carouselProject5"
+                    data-bs-slide="next"
+                  >
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="modal fade"
+          id="projectReports"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Reports</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <!-- Carousel -->
+                <div
+                  id="carouselProject6"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                      <img
+                        src="inventory/report.jpg"
+                        class="d-block w-100 rounded"
+                        alt="Product Catalog 1"
+                      />
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                      <img
+                        src="inventory/stockmovement.jpg"
+                        class="d-block w-100 rounded"
+                        alt="Product Catalog 2"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="inventory/stocksummary.jpg"
+                        class="d-block w-100 rounded"
+                        alt="Product Catalog 2"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="inventory/trans.jpg"
+                        class="d-block w-100 rounded"
+                        alt="Product Catalog 2"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="inventory/assignreport.jpg"
+                        class="d-block w-100 rounded"
+                        alt="Product Catalog 2"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Controls -->
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselProject6"
+                    data-bs-slide="prev"
+                  >
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselProject6"
                     data-bs-slide="next"
                   >
                     <span class="carousel-control-next-icon"></span>
