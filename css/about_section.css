@@ -290,18 +290,43 @@
   padding: 2rem;
   border-radius: 15px;
   border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.257);
   position: relative;
   transition: all 0.3s ease;
 }
 
 .timeline-content:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.393);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.62);
 }
-
+.timeline-content-blue {
+  background: linear-gradient(135deg, #002871, #2264d7, #78a9ff),
+    /* texture overlay */
+      repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.05) 0px,
+        rgba(255, 255, 255, 0.05) 2px,
+        transparent 2px,
+        transparent 6px
+      );
+  background-blend-mode: overlay;
+}
+.timeline-content-red {
+  background: linear-gradient(135deg, #550000, #a40f0f, #ff7878),
+    /* texture overlay */
+      repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.05) 0px,
+        rgba(255, 255, 255, 0.05) 2px,
+        transparent 2px,
+        transparent 6px
+      );
+  background-blend-mode: overlay;
+}
 .timeline-date {
   font-weight: 600;
-  color: #000;
+  color: white;
+
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
@@ -309,12 +334,14 @@
 .timeline-title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #000;
+  color: white;
+
   margin-bottom: 1rem;
 }
 
 .timeline-desc {
-  color: #202020;
+  color: white;
+
   line-height: 1.6;
 }
 
@@ -325,12 +352,8 @@
   transition: color 0.3s ease;
 }
 
-.nspire:hover {
-  color: #00a3e9; /* or your accent color */
-}
-
-.bhc:hover {
-  color: #dc001d; /* or your accent color */
+.timeline-link:hover {
+  color: #ffe600;
 }
 
 .timeline-dot {

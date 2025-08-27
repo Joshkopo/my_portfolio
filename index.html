@@ -83,7 +83,18 @@
         pointer-events: auto !important;
       }
     </style>
-
+    <div class="preloader" id="preloader">
+      <div class="preloader-content">
+        <div class="preloader-name">Joshua Dela Cruz</div>
+        <div class="preloader-role">Web Developer</div>
+        <div class="preloader-tagline">
+          Crafting digital experiences<span class="dots"></span>
+        </div>
+        <div class="loading-bar">
+          <div class="loading-progress"></div>
+        </div>
+      </div>
+    </div>
     <div class="nav-container">
       <nav class="nav-bar">
         <a href="#home" class="nav-item active">
@@ -251,7 +262,7 @@
                     </h3>
                     <div class="timeline">
                       <div class="timeline-item animate-on-scroll">
-                        <div class="timeline-content">
+                        <div class="timeline-content timeline-content-blue">
                           <div class="timeline-date">2024 - 2025</div>
                           <h4 class="timeline-title">System Analyst Intern</h4>
                           <p class="timeline-desc">
@@ -275,7 +286,7 @@
                       </div>
 
                       <div class="timeline-item animate-on-scroll">
-                        <div class="timeline-content">
+                        <div class="timeline-content timeline-content-red">
                           <div class="timeline-date">2021 - 2025</div>
                           <h4 class="timeline-title">BSIT Student</h4>
                           <p class="timeline-desc">
@@ -285,7 +296,7 @@
                               class="timeline-link bhc"
                               data-bs-toggle="tooltip"
                               data-bs-html="true"
-                              title='<img src="img/bhc_img.jpg" alt="NSPIRE"  >'
+                              title='<img src="img/bhc_img.jpg" alt="BHC"  >'
                             >
                               Bataan Heroes College
                             </a>
@@ -618,6 +629,104 @@
           return new bootstrap.Tooltip(tooltipTriggerEl);
         });
       });
+    </script>
+    <script>
+      // Enhanced preloader with home section animation trigger
+      window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+
+        // Wait for preloader animations to complete, then fade out
+        setTimeout(() => {
+          preloader.classList.add("fade-out");
+
+          // Remove preloader from DOM and start home animations
+          setTimeout(() => {
+            preloader.style.display = "none";
+            startHomeAnimations(); // Trigger home section animations
+          }, 800);
+        }, 4500); // Total preloader time: 4.5 seconds
+      });
+
+      // Fallback: Hide preloader after 6 seconds regardless
+      setTimeout(() => {
+        const preloader = document.getElementById("preloader");
+        if (preloader) {
+          preloader.classList.add("fade-out");
+          setTimeout(() => {
+            preloader.style.display = "none";
+            startHomeAnimations(); // Trigger home animations
+          }, 800);
+        }
+      }, 6000);
+
+      // Function to start home section animations
+      function startHomeAnimations() {
+        // Get all the elements
+        const secondCol = document.querySelector(".second-col");
+        const role = document.querySelector(".role");
+        const roleAfter = document.querySelector(".role::after");
+        const title = document.querySelector("#home h2");
+        const tagline = document.querySelector(".tagline");
+        const taglineBefore = document.querySelector(".tagline::before");
+        const buttonsContainer = document.querySelector(".buttons-container");
+        const buttons = document.querySelectorAll(".btn");
+        const image = document.querySelector(".image-box img");
+
+        // Start animations with proper timing
+        if (secondCol) {
+          setTimeout(() => secondCol.classList.add("animate-second-col"), 100);
+        }
+
+        if (image) {
+          setTimeout(() => image.classList.add("animate-image"), 300);
+        }
+
+        if (role) {
+          setTimeout(() => {
+            role.classList.add("animate-role");
+            // Animate the role line
+            setTimeout(() => {
+              role.style.setProperty(
+                "--after-animation",
+                "lineExpand 0.8s ease-out forwards"
+              );
+              const style = document.createElement("style");
+              style.textContent = `.role::after { animation: lineExpand 0.8s ease-out forwards; }`;
+              document.head.appendChild(style);
+            }, 800);
+          }, 600);
+        }
+
+        if (title) {
+          setTimeout(() => title.classList.add("animate-title"), 900);
+        }
+
+        if (tagline) {
+          setTimeout(() => {
+            tagline.classList.add("animate-tagline");
+            // Add shimmer effect
+            setTimeout(() => {
+              const style = document.createElement("style");
+              style.textContent = `.tagline::before { animation: shimmer 2s infinite; }`;
+              document.head.appendChild(style);
+            }, 800);
+          }, 1500);
+        }
+
+        if (buttonsContainer) {
+          setTimeout(
+            () => buttonsContainer.classList.add("animate-buttons"),
+            1700
+          );
+        }
+
+        // Animate buttons individually
+        buttons.forEach((btn, index) => {
+          setTimeout(() => {
+            btn.classList.add(index === 0 ? "animate-btn-1" : "animate-btn-2");
+          }, 1800 + index * 200);
+        });
+      }
     </script>
   </body>
 </html>
