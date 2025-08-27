@@ -25,10 +25,65 @@
   </head>
   <body>
     <style>
+      /* Heavy Smooth Scrolling */
       html {
-        scroll-behavior: smooth;
+        scroll-behavior: auto; /* Disable default smooth scroll */
+      }
+
+      body {
+        overflow: hidden; /* Hide scrollbar for smooth effect */
+        height: 100vh;
+      }
+
+      /* Smooth scrolling container */
+      .smooth-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .smooth-content {
+        pointer-events: auto;
+        will-change: transform;
+        transform: translate3d(0, 0, 0);
+      }
+
+      /* Ensure nav stays on top */
+      .nav-container {
+        position: fixed;
+        z-index: 1000;
+        pointer-events: auto;
+      }
+
+      /* Ensure all interactive elements work */
+      a,
+      button,
+      input,
+      select,
+      textarea,
+      .btn,
+      .nav-item,
+      .project-card,
+      .contact-link {
+        pointer-events: auto !important;
+      }
+
+      /* Fix hover states */
+      .info-card:hover,
+      .skill-item:hover,
+      .timeline-content:hover,
+      .project-card:hover,
+      .contact-link:hover,
+      .btn:hover,
+      .nav-item:hover {
+        pointer-events: auto !important;
       }
     </style>
+
     <div class="nav-container">
       <nav class="nav-bar">
         <a href="#home" class="nav-item active">
@@ -86,387 +141,483 @@
       </nav>
     </div>
 
-    <!-- Floating background elements -->
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-    <section id="home">
-      <!-- <div class="name-ticker">
-        <div class="ticker-content">
-          <span
-            >📧 delacruzowa285@gmail.com • 📱 +639152217372 • Available for
-            Freelance & Work From Home
-          </span>
-        </div>
-      </div> -->
-      <div
-        class="container d-flex justify-content-center align-items-center min-vh-100"
-      >
-        <div class="row w-100" style="max-width: 1600px">
-          <!-- Column 1 -->
-          <div class="col-5 first-col p-0 fixed-height">
-            <div class="image-wrapper">
-              <div class="image-box">
-                <img src="img/1.png" alt="Joshua Dela Cruz" />
-              </div>
-            </div>
-          </div>
-
-          <!-- Column 2 -->
+    <div class="smooth-wrapper">
+      <div class="smooth-content" id="smooth-content">
+        <!-- Floating background elements -->
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <section id="home">
           <div
-            class="col-7 second-col d-flex flex-column justify-content-center p-3 fixed-height"
+            class="container d-flex justify-content-center align-items-center min-vh-100"
           >
-            <p class="role mb-2">WEB DEVELOPER</p>
-            <h2>Joshua<br />Dela Cruz</h2>
-            <p class="tagline">Adaptable. Detail-oriented. Always learning</p>
-
-            <div class="buttons-container d-flex gap-3">
-              <a href="#projects" class="btn btn-dark"
-                ><span>View My Work</span></a
-              >
-              <a href="#" class="btn btn-outline-dark"
-                ><span>Contact Me</span></a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="name-ticker">
-        <div class="ticker-content">
-          <span
-            >Joshua Dela Cruz — Web Developer — Adaptable. Detail-oriented.
-            Always learning —
-          </span>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section" id="about">
-      <div class="about-bg-element"></div>
-      <div class="about-bg-element"></div>
-      <div class="about-bg-element"></div>
-
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="about-content">
-              <h2 class="about-title">About Me</h2>
-
-              <p class="about-description">
-                I'm Joshua M. Dela Cruz, a BSIT graduate from Bataan Heroes
-                College (Class of 2025) with internship experience as a System
-                Analyst at NSPIRE. Skilled in web development (PHP, HTML, CSS,
-                Bootstrap), Microsoft Office, and basic troubleshooting. I enjoy
-                creating practical digital solutions and continuously improving
-                my technical and professional skills.
-              </p>
-
-              <!-- Personal Information Cards -->
-              <div class="info-cards">
-                <div class="info-card">
-                  <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                  <p>
-                    Bachelor of Science in Information Technology<br />
-                    Bataan Heroes College, Class of 2025
-                  </p>
-                </div>
-                <div class="info-card">
-                  <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
-                  <p>
-                    Abucay, Bataan, Philippines<br />
-                    Central Luzon Region
-                  </p>
-                </div>
-                <div class="info-card">
-                  <h3><i class="fas fa-briefcase"></i> Experience</h3>
-                  <p>
-                    System Analyst Intern at NSPIRE<br />
-                    Focus on documentation and system design
-                  </p>
-                </div>
-                <div class="info-card">
-                  <h3><i class="fas fa-heart"></i> Interests</h3>
-                  <p>
-                    Web Development, System Analysis<br />
-                    Digital Solutions & Technology Innovation
-                  </p>
+            <div class="row w-100" style="max-width: 1600px">
+              <!-- Column 1 -->
+              <div class="col-5 first-col p-0 fixed-height">
+                <div class="image-wrapper">
+                  <div class="image-box">
+                    <img src="img/1.png" alt="Joshua Dela Cruz" />
+                  </div>
                 </div>
               </div>
 
-              <!-- Skills Section -->
-              <!-- <h3 class="skills-title">Technical Skills</h3>
-              <div class="skills-grid">
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <i class="fas fa-code"></i>
-                  </div>
-                  <h3 class="skill-title">Web Development</h3>
-                  <p class="skill-description">
-                    Experienced in building responsive websites using PHP,
-                    HTML5, CSS3, and Bootstrap framework for modern web
-                    applications.
-                  </p>
-                  <div class="skill-level">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
+              <!-- Column 2 -->
+              <div
+                class="col-7 second-col d-flex flex-column justify-content-center p-3 fixed-height"
+              >
+                <p class="role mb-2">WEB DEVELOPER</p>
+                <h2>Joshua<br />Dela Cruz</h2>
+                <p class="tagline">
+                  Adaptable. Detail-oriented. Always learning
+                </p>
 
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <i class="fas fa-file-alt"></i>
-                  </div>
-                  <h3 class="skill-title">Microsoft Office</h3>
-                  <p class="skill-description">
-                    Proficient in the complete Office suite including Word,
-                    Excel, PowerPoint for professional documentation and
-                    presentations.
-                  </p>
-                  <div class="skill-level">
-                    <div class="skill-progress"></div>
-                  </div>
+                <div class="buttons-container d-flex gap-3">
+                  <a href="#projects" class="btn btn-dark"
+                    ><span>View My Work</span></a
+                  >
+                  <a href="#" class="btn btn-outline-dark"
+                    ><span>Contact Me</span></a
+                  >
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="name-ticker">
+            <div class="ticker-content">
+              <span
+                >Joshua Dela Cruz — Web Developer — Adaptable. Detail-oriented.
+                Always learning —
+              </span>
+            </div>
+          </div>
+        </section>
 
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <i class="fas fa-chart-line"></i>
-                  </div>
-                  <h3 class="skill-title">System Analysis</h3>
-                  <p class="skill-description">
-                    Skilled in documenting workflows, creating user guides, and
-                    assisting in comprehensive system design and analysis.
+        <section class="about-section" id="about">
+          <div class="about-bg-element"></div>
+          <div class="about-bg-element"></div>
+          <div class="about-bg-element"></div>
+
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <div class="about-content">
+                  <h2 class="about-title animate-on-scroll">About Me</h2>
+
+                  <p class="about-description animate-on-scroll">
+                    I'm Joshua M. Dela Cruz, a BSIT graduate from Bataan Heroes
+                    College (Class of 2025) with internship experience as a
+                    System Analyst at NSPIRE. Skilled in web development (PHP,
+                    HTML, CSS, Bootstrap), Microsoft Office, and basic
+                    troubleshooting. I enjoy creating practical digital
+                    solutions and continuously improving my technical and
+                    professional skills.
                   </p>
-                  <div class="skill-level">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
 
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <i class="fas fa-tools"></i>
-                  </div>
-                  <h3 class="skill-title">Troubleshooting</h3>
-                  <p class="skill-description">
-                    Competent in basic hardware and software troubleshooting,
-                    providing reliable IT support and technical assistance.
-                  </p>
-                  <div class="skill-level">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
-              </div> -->
-
-              <!-- Experience Timeline -->
-              <div class="experience-section">
-                <h3 class="experience-title">Professional Journey</h3>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <div class="timeline-content">
-                      <div class="timeline-date">2024 - 2025</div>
-                      <h4 class="timeline-title">System Analyst Intern</h4>
-                      <p class="timeline-desc">
-                        NSPIRE • Gained hands-on experience in system analysis,
-                        documentation, and workflow optimization. Collaborated
-                        with development teams on system design and user
-                        experience improvements.
+                  <!-- Personal Information Cards -->
+                  <div class="info-cards">
+                    <div class="info-card animate-on-scroll">
+                      <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                      <p>
+                        Bachelor of Science in Information Technology<br />
+                        Bataan Heroes College, Class of 2025
                       </p>
                     </div>
-                    <div class="timeline-dot"></div>
-                  </div>
-
-                  <div class="timeline-item">
-                    <div class="timeline-content">
-                      <div class="timeline-date">2021 - 2025</div>
-                      <h4 class="timeline-title">BSIT Student</h4>
-                      <p class="timeline-desc">
-                        Bataan Heroes College • Focused on software development,
-                        database management, and system analysis. Completed
-                        various projects in web development and IT
-                        infrastructure.
+                    <div class="info-card animate-on-scroll">
+                      <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+                      <p>
+                        Abucay, Bataan, Philippines<br />
+                        Central Luzon Region
                       </p>
                     </div>
-                    <div class="timeline-dot"></div>
+                    <div class="info-card animate-on-scroll">
+                      <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                      <p>
+                        System Analyst Intern at NSPIRE<br />
+                        Focus on documentation and system design
+                      </p>
+                    </div>
+                    <div class="info-card animate-on-scroll">
+                      <h3><i class="fas fa-heart"></i> Interests</h3>
+                      <p>
+                        Web Development, System Analysis<br />
+                        Digital Solutions & Technology Innovation
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </div>
 
-              <!-- Contact Section -->
-              <!-- <div class="contact-section">
-                <h3 class="contact-title">Let's Connect</h3>
-                <div class="contact-links">
-                  <a
-                    href="mailto:joshua.delacruz@email.com"
-                    class="contact-link"
-                  >
-                    <i class="fas fa-envelope"></i>
-                    Email Me
-                  </a>
-                  <a
-                    href="https://linkedin.com/in/joshua-delacruz"
-                    class="contact-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-linkedin-in"></i>
-                    LinkedIn
-                  </a>
-                  <a
-                    href="https://github.com/joshua-delacruz"
-                    class="contact-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github"></i>
-                    GitHub
-                  </a>
-                  <a href="tel:+639123456789" class="contact-link">
-                    <i class="fas fa-phone"></i>
-                    Call Me
-                  </a>
-                </div>
-              </div> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                  <!-- Experience Timeline -->
+                  <div class="experience-section">
+                    <h3 class="experience-title animate-on-scroll">
+                      Professional Journey
+                    </h3>
+                    <div class="timeline">
+                      <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-content">
+                          <div class="timeline-date">2024 - 2025</div>
+                          <h4 class="timeline-title">System Analyst Intern</h4>
+                          <p class="timeline-desc">
+                            <a
+                              href="https://www.facebook.com/NSPIREINC"
+                              target="_blank"
+                              class="timeline-link nspire"
+                              data-bs-toggle="tooltip"
+                              data-bs-html="true"
+                              title='<img src="img/nspire_co.jpg" alt="NSPIRE"  >'
+                            >
+                              NSPIRE
+                            </a>
+                            • Gained hands-on experience in system analysis,
+                            documentation, and workflow optimization.
+                            Collaborated with development teams on system design
+                            and user experience improvements.
+                          </p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                      </div>
 
-    <!-- Projects Section CSS -->
-    <style></style>
-
-    <!-- Projects Section HTML -->
-    <section class="projects-section" id="projects">
-      <div class="projects-bg-element"></div>
-      <div class="projects-bg-element"></div>
-      <div class="projects-bg-element"></div>
-
-      <div class="container">
-        <div class="projects-content">
-          <h2 class="projects-title">My Projects</h2>
-
-          <!-- <div class="filter-container">
-            <button class="filter-btn active">All</button>
-            <button class="filter-btn">Web Apps</button>
-            <button class="filter-btn">E-commerce</button>
-            <button class="filter-btn">Mobile</button>
-            <button class="filter-btn">UI/UX</button>
-          </div> -->
-
-          <div class="projects-grid">
-            <!-- Project Card 1 -->
-            <div class="project-card">
-              <div class="project-image">
-                <img src="img/uv.jpg" alt="E-commerce with POS" />
-                <div class="project-overlay">
-  <a href="project_e_commerce.html" class="view-project-btn" style="text-decoration: none;">
-    View Project
-  </a>
-</div>
-
-              </div>
-              <div class="project-content">
-                <span class="project-category">Capstone</span>
-                <h3 class="project-title">
-                  E-commerce with POS & Appointments
-                </h3>
-                <p class="project-description">
-                  A capstone project combining online shopping, POS system for
-                  walk-in customers, and appointment booking for tattoo &
-                  piercing services.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">MySQL</span>
-                  <span class="tech-tag">Bootstrap</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project Card 2 -->
-            <div class="project-card">
-              <div class="project-image">
-                <img src="img/is.jpg" alt="Inventory System" />
-                <div class="project-overlay">
-                  <button class="view-project-btn">View Project</button>
-                </div>
-              </div>
-              <div class="project-content">
-                <span class="project-category">Mini Project</span>
-                <h3 class="project-title">Inventory System</h3>
-                <p class="project-description">
-                  A simple inventory management tool to track products,
-                  categories, and stock movements.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">MySQL</span>
+                      <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-content">
+                          <div class="timeline-date">2021 - 2025</div>
+                          <h4 class="timeline-title">BSIT Student</h4>
+                          <p class="timeline-desc">
+                            <a
+                              href="https://www.facebook.com/Heroes1979"
+                              target="_blank"
+                              class="timeline-link bhc"
+                              data-bs-toggle="tooltip"
+                              data-bs-html="true"
+                              title='<img src="img/bhc_img.jpg" alt="NSPIRE"  >'
+                            >
+                              Bataan Heroes College
+                            </a>
+                            • Focused on software development, database
+                            management, and system analysis. Completed various
+                            projects in web development and IT infrastructure.
+                          </p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        <!-- Projects Section HTML -->
+        <section class="projects-section" id="projects">
+          <div class="projects-bg-element"></div>
+          <div class="projects-bg-element"></div>
+          <div class="projects-bg-element"></div>
+
+          <div class="container">
+            <div class="projects-content">
+              <h2 class="projects-title">My Projects</h2>
+              <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                  <div class="project-image">
+                    <img src="img/uv.jpg" alt="E-commerce with POS" />
+                    <div class="project-overlay">
+                      <a
+                        href="project_e_commerce.html"
+                        class="view-project-btn"
+                        style="text-decoration: none"
+                      >
+                        View Project
+                      </a>
+                    </div>
+                  </div>
+                  <div class="project-content">
+                    <span class="project-category">Capstone</span>
+                    <h3 class="project-title">
+                      E-commerce with POS & Appointments
+                    </h3>
+                    <p class="project-description">
+                      A capstone project combining online shopping, POS system
+                      for walk-in customers, and appointment booking for tattoo
+                      & piercing services.
+                    </p>
+                    <div class="project-tech">
+                      <span class="tech-tag">PHP</span>
+                      <span class="tech-tag">MySQL</span>
+                      <span class="tech-tag">Bootstrap</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                  <div class="project-image">
+                    <img src="img/is.jpg" alt="Inventory System" />
+                    <div class="project-overlay">
+                      <button class="view-project-btn">View Project</button>
+                    </div>
+                  </div>
+                  <div class="project-content">
+                    <span class="project-category">Mini Project</span>
+                    <h3 class="project-title">Inventory System</h3>
+                    <p class="project-description">
+                      A simple inventory management tool to track products,
+                      categories, and stock movements.
+                    </p>
+                    <div class="project-tech">
+                      <span class="tech-tag">PHP</span>
+                      <span class="tech-tag">MySQL</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills section -->
+        <section class="skills-section" id="skills">
+          <div class="container">
+            <h3 class="skills-title animate-on-scroll">Skills</h3>
+            <div class="skills-grid">
+              <div class="skill-item animate-on-scroll">
+                <div class="skill-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <h3 class="skill-title">Web Development</h3>
+                <p class="skill-description">
+                  Experienced in building responsive websites using PHP, HTML5,
+                  CSS3, and Bootstrap framework for modern web applications.
+                </p>
+                <div class="skill-level">
+                  <div class="skill-progress"></div>
+                </div>
+              </div>
+
+              <div class="skill-item animate-on-scroll">
+                <div class="skill-icon">
+                  <i class="fas fa-file-alt"></i>
+                </div>
+                <h3 class="skill-title">Microsoft Office</h3>
+                <p class="skill-description">
+                  Proficient in the complete Office suite including Word, Excel,
+                  PowerPoint for professional documentation and presentations.
+                </p>
+                <div class="skill-level">
+                  <div class="skill-progress"></div>
+                </div>
+              </div>
+
+              <div class="skill-item animate-on-scroll">
+                <div class="skill-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="skill-title">System Analysis</h3>
+                <p class="skill-description">
+                  Skilled in documenting workflows, creating user guides, and
+                  assisting in comprehensive system design and analysis.
+                </p>
+                <div class="skill-level">
+                  <div class="skill-progress"></div>
+                </div>
+              </div>
+
+              <div class="skill-item animate-on-scroll">
+                <div class="skill-icon">
+                  <i class="fas fa-tools"></i>
+                </div>
+                <h3 class="skill-title">Troubleshooting</h3>
+                <p class="skill-description">
+                  Competent in basic hardware and software troubleshooting,
+                  providing reliable IT support and technical assistance.
+                </p>
+                <div class="skill-level">
+                  <div class="skill-progress"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-    <section class="skills-section" id="skills">
-      <div class="container">
-         <h3 class="skills-title">Skills</h3>  
-              <div class="skills-grid">
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <i class="fas fa-code"></i>
-                  </div>
-                  <h3 class="skill-title">Web Development</h3>
-                  <p class="skill-description">
-                    Experienced in building responsive websites using PHP,
-                    HTML5, CSS3, and Bootstrap framework for modern web
-                    applications.
-                  </p>
-                  <div class="skill-level">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
+    </div>
 
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <i class="fas fa-file-alt"></i>
-                  </div>
-                  <h3 class="skill-title">Microsoft Office</h3>
-                  <p class="skill-description">
-                    Proficient in the complete Office suite including Word,
-                    Excel, PowerPoint for professional documentation and
-                    presentations.
-                  </p>
-                  <div class="skill-level">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
+    <script>
+      // Heavy Smooth Scrolling Implementation
+      class SmoothScroll {
+        constructor() {
+          this.scrollElement = document.getElementById("smooth-content");
 
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <i class="fas fa-chart-line"></i>
-                  </div>
-                  <h3 class="skill-title">System Analysis</h3>
-                  <p class="skill-description">
-                    Skilled in documenting workflows, creating user guides, and
-                    assisting in comprehensive system design and analysis.
-                  </p>
-                  <div class="skill-level">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
+          // Scrolling properties
+          this.targetY = 0;
+          this.currentY = 0;
+          this.ease = 0.08; // Adjust for heaviness (lower = heavier)
+          this.isScrolling = false;
+          this.scrollTimeout = null;
 
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <i class="fas fa-tools"></i>
-                  </div>
-                  <h3 class="skill-title">Troubleshooting</h3>
-                  <p class="skill-description">
-                    Competent in basic hardware and software troubleshooting,
-                    providing reliable IT support and technical assistance.
-                  </p>
-                  <div class="skill-level">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
-      </div>
-    </section>
+          // Get total scrollable height
+          this.maxScroll = this.scrollElement.scrollHeight - window.innerHeight;
 
-    
+          // Bind events and start
+          this.bindEvents();
+          this.render();
+        }
+
+        bindEvents() {
+          // Mouse wheel with momentum
+          window.addEventListener(
+            "wheel",
+            (e) => {
+              e.preventDefault();
+
+              // Heavy scrolling multiplier
+              const delta = e.deltaY * 1.2;
+              this.targetY += delta;
+              this.targetY = Math.max(
+                0,
+                Math.min(this.maxScroll, this.targetY)
+              );
+
+              this.isScrolling = true;
+              clearTimeout(this.scrollTimeout);
+              this.scrollTimeout = setTimeout(() => {
+                this.isScrolling = false;
+              }, 100);
+            },
+            { passive: false }
+          );
+
+          // Touch events for mobile
+          let touchStartY = 0;
+          window.addEventListener(
+            "touchstart",
+            (e) => {
+              touchStartY = e.touches[0].clientY;
+            },
+            { passive: true }
+          );
+
+          window.addEventListener(
+            "touchmove",
+            (e) => {
+              e.preventDefault();
+              const touchDeltaY = touchStartY - e.touches[0].clientY;
+              this.targetY += touchDeltaY * 2;
+              this.targetY = Math.max(
+                0,
+                Math.min(this.maxScroll, this.targetY)
+              );
+              touchStartY = e.touches[0].clientY;
+              this.isScrolling = true;
+            },
+            { passive: false }
+          );
+
+          window.addEventListener("touchend", () => {
+            setTimeout(() => {
+              this.isScrolling = false;
+            }, 150);
+          });
+
+          // Keyboard navigation
+          window.addEventListener("keydown", (e) => {
+            switch (e.key) {
+              case "ArrowDown":
+              case " ":
+                e.preventDefault();
+                this.targetY += window.innerHeight * 0.8;
+                break;
+              case "ArrowUp":
+                e.preventDefault();
+                this.targetY -= window.innerHeight * 0.8;
+                break;
+              case "Home":
+                e.preventDefault();
+                this.targetY = 0;
+                break;
+              case "End":
+                e.preventDefault();
+                this.targetY = this.maxScroll;
+                break;
+            }
+            this.targetY = Math.max(0, Math.min(this.maxScroll, this.targetY));
+          });
+
+          // Resize handler
+          window.addEventListener("resize", () => {
+            this.maxScroll =
+              this.scrollElement.scrollHeight - window.innerHeight;
+          });
+
+          // Handle nav clicks
+          document.querySelectorAll(".nav-item").forEach((item) => {
+            item.addEventListener("click", (e) => {
+              e.preventDefault();
+              const target = item.getAttribute("href").substring(1);
+              const targetElement = document.getElementById(target);
+              if (targetElement) {
+                this.targetY = targetElement.offsetTop;
+                this.targetY = Math.max(
+                  0,
+                  Math.min(this.maxScroll, this.targetY)
+                );
+              }
+            });
+          });
+        }
+
+        render() {
+          // Smooth interpolation with easing
+          const diff = this.targetY - this.currentY;
+          this.currentY += diff * this.ease;
+
+          // Apply transform
+          this.scrollElement.style.transform = `translate3d(0, -${this.currentY}px, 0)`;
+
+          // Continue animation loop
+          requestAnimationFrame(() => this.render());
+        }
+      }
+
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -280px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+          }
+        });
+      }, observerOptions);
+
+      // Initialize when DOM is loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initialize smooth scrolling
+        new SmoothScroll();
+
+        // Initialize scroll animations
+        const elementsToAnimate =
+          document.querySelectorAll(".animate-on-scroll");
+        elementsToAnimate.forEach((el) => observer.observe(el));
+      });
+
+      // Prevent default scrolling
+      document.addEventListener(
+        "wheel",
+        (e) => {
+          e.preventDefault();
+        },
+        { passive: false }
+      );
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        tooltipTriggerList.map((tooltipTriggerEl) => {
+          return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+      });
+    </script>
   </body>
 </html>

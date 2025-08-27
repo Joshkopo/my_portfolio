@@ -279,9 +279,12 @@
 .btn-close {
   filter: invert(1);
 }
-
 .modal-body img {
-  max-height: 80vh;
+  width: 1500px;
+  max-width: 1500px;
+  max-height: 80vh; /* keep it responsive */
+  display: block; /* makes margin auto work */
+  margin: 0 auto; /* centers image horizontally */
   object-fit: contain;
   border-radius: 10px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);

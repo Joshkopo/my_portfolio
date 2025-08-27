@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joshua Dela Cruz</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome 6 (Free) -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/about_section.css" />
+    <link rel="stylesheet" href="css/hero_section.css" />
+    <link rel="stylesheet" href="css/projects_e_commerce.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+  </head>
+  <body>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <div class="nav-container">
+      <nav class="nav-bar">
+        <a href="#home" class="nav-item active">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          <span class="tooltip-text">HOME</span>
+        </a>
+
+        <a href="#about" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 3.5C14.1 3.1 13.1 3.1 12.2 3.5L6 7V9H7V20C7 21.1 7.9 22 9 22V10H15V22C16.1 22 17 21.1 17 20V9H21Z"
+            />
+          </svg>
+          <span class="tooltip-text">ABOUT</span>
+        </a>
+
+        <a href="#projects" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"
+            />
+          </svg>
+          <span class="tooltip-text">PROJECTS</span>
+        </a>
+
+        <a href="#skills" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 
+      19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 
+      21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 
+      15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 
+      9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 
+      4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 
+      4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 
+      2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 
+      8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 
+      14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 
+      19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z"
+            />
+          </svg>
+          <span class="tooltip-text">SKILLS</span>
+        </a>
+
+        <a href="#contact" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4M20,8L12,13L4,8V6L12,11L20,6V8Z"
+            />
+          </svg>
+          <span class="tooltip-text">CONTACT</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Floating background elements -->
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <section id="home">
+      <!-- <div class="name-ticker">
+        <div class="ticker-content">
+          <span
+            >📧 delacruzowa285@gmail.com • 📱 +639152217372 • Available for
+            Freelance & Work From Home
+          </span>
+        </div>
+      </div> -->
+      <div
+        class="container d-flex justify-content-center align-items-center min-vh-100"
+      >
+        <div class="row w-100" style="max-width: 1600px">
+          <!-- Column 1 -->
+          <div class="col-5 first-col p-0 fixed-height">
+            <div class="image-wrapper">
+              <div class="image-box">
+                <img src="img/1.png" alt="Joshua Dela Cruz" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div
+            class="col-7 second-col d-flex flex-column justify-content-center p-3 fixed-height"
+          >
+            <p class="role mb-2">WEB DEVELOPER</p>
+            <h2>Joshua<br />Dela Cruz</h2>
+            <p class="tagline">Adaptable. Detail-oriented. Always learning</p>
+
+            <div class="buttons-container d-flex gap-3">
+              <a href="#projects" class="btn btn-dark"
+                ><span>View My Work</span></a
+              >
+              <a href="#" class="btn btn-outline-dark"
+                ><span>Contact Me</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="name-ticker">
+        <div class="ticker-content">
+          <span
+            >Joshua Dela Cruz — Web Developer — Adaptable. Detail-oriented.
+            Always learning —
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-bg-element"></div>
+      <div class="about-bg-element"></div>
+      <div class="about-bg-element"></div>
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="about-content">
+              <h2 class="about-title">About Me</h2>
+
+              <p class="about-description">
+                I'm Joshua M. Dela Cruz, a BSIT graduate from Bataan Heroes
+                College (Class of 2025) with internship experience as a System
+                Analyst at NSPIRE. Skilled in web development (PHP, HTML, CSS,
+                Bootstrap), Microsoft Office, and basic troubleshooting. I enjoy
+                creating practical digital solutions and continuously improving
+                my technical and professional skills.
+              </p>
+
+              <!-- Personal Information Cards -->
+              <div class="info-cards">
+                <div class="info-card">
+                  <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                  <p>
+                    Bachelor of Science in Information Technology<br />
+                    Bataan Heroes College, Class of 2025
+                  </p>
+                </div>
+                <div class="info-card">
+                  <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+                  <p>
+                    Abucay, Bataan, Philippines<br />
+                    Central Luzon Region
+                  </p>
+                </div>
+                <div class="info-card">
+                  <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                  <p>
+                    System Analyst Intern at NSPIRE<br />
+                    Focus on documentation and system design
+                  </p>
+                </div>
+                <div class="info-card">
+                  <h3><i class="fas fa-heart"></i> Interests</h3>
+                  <p>
+                    Web Development, System Analysis<br />
+                    Digital Solutions & Technology Innovation
+                  </p>
+                </div>
+              </div>
+              <!-- Experience Timeline -->
+              <div class="experience-section">
+                <h3 class="experience-title">Professional Journey</h3>
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <div class="timeline-content">
+                      <div class="timeline-date">2024 - 2025</div>
+                      <h4 class="timeline-title">System Analyst Intern</h4>
+                      <p class="timeline-desc">
+                        NSPIRE • Gained hands-on experience in system analysis,
+                        documentation, and workflow optimization. Collaborated
+                        with development teams on system design and user
+                        experience improvements.
+                      </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-content">
+                      <div class="timeline-date">2021 - 2025</div>
+                      <h4 class="timeline-title">BSIT Student</h4>
+                      <p class="timeline-desc">
+                        Bataan Heroes College • Focused on software development,
+                        database management, and system analysis. Completed
+                        various projects in web development and IT
+                        infrastructure.
+                      </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Section -->
+              <!-- <div class="contact-section">
+                <h3 class="contact-title">Let's Connect</h3>
+                <div class="contact-links">
+                  <a
+                    href="mailto:joshua.delacruz@email.com"
+                    class="contact-link"
+                  >
+                    <i class="fas fa-envelope"></i>
+                    Email Me
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/joshua-delacruz"
+                    class="contact-link"
+                    target="_blank"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                    LinkedIn
+                  </a>
+                  <a
+                    href="https://github.com/joshua-delacruz"
+                    class="contact-link"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i>
+                    GitHub
+                  </a>
+                  <a href="tel:+639123456789" class="contact-link">
+                    <i class="fas fa-phone"></i>
+                    Call Me
+                  </a>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section CSS -->
+    <style></style>
+
+    <!-- Projects Section HTML -->
+    <section class="projects-section" id="projects">
+      <div class="projects-bg-element"></div>
+      <div class="projects-bg-element"></div>
+      <div class="projects-bg-element"></div>
+
+      <div class="container">
+        <div class="projects-content">
+          <h2 class="projects-title">My Projects</h2>
+
+          <!-- <div class="filter-container">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Web Apps</button>
+            <button class="filter-btn">E-commerce</button>
+            <button class="filter-btn">Mobile</button>
+            <button class="filter-btn">UI/UX</button>
+          </div> -->
+
+          <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+              <div class="project-image">
+                <img src="img/uv.jpg" alt="E-commerce with POS" />
+                <div class="project-overlay">
+  <a href="project_e_commerce.html" class="view-project-btn" style="text-decoration: none;">
+    View Project
+  </a>
+</div>
+
+              </div>
+              <div class="project-content">
+                <span class="project-category">Capstone</span>
+                <h3 class="project-title">
+                  E-commerce with POS & Appointments
+                </h3>
+                <p class="project-description">
+                  A capstone project combining online shopping, POS system for
+                  walk-in customers, and appointment booking for tattoo &
+                  piercing services.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">Bootstrap</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+              <div class="project-image">
+                <img src="img/is.jpg" alt="Inventory System" />
+                <div class="project-overlay">
+                  <button class="view-project-btn">View Project</button>
+                </div>
+              </div>
+              <div class="project-content">
+                <span class="project-category">Mini Project</span>
+                <h3 class="project-title">Inventory System</h3>
+                <p class="project-description">
+                  A simple inventory management tool to track products,
+                  categories, and stock movements.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">MySQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills-section" id="skills">
+      <div class="container">
+         <h3 class="skills-title">Skills</h3>  
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <h3 class="skill-title">Web Development</h3>
+                  <p class="skill-description">
+                    Experienced in building responsive websites using PHP,
+                    HTML5, CSS3, and Bootstrap framework for modern web
+                    applications.
+                  </p>
+                  <div class="skill-level">
+                    <div class="skill-progress"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <i class="fas fa-file-alt"></i>
+                  </div>
+                  <h3 class="skill-title">Microsoft Office</h3>
+                  <p class="skill-description">
+                    Proficient in the complete Office suite including Word,
+                    Excel, PowerPoint for professional documentation and
+                    presentations.
+                  </p>
+                  <div class="skill-level">
+                    <div class="skill-progress"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <h3 class="skill-title">System Analysis</h3>
+                  <p class="skill-description">
+                    Skilled in documenting workflows, creating user guides, and
+                    assisting in comprehensive system design and analysis.
+                  </p>
+                  <div class="skill-level">
+                    <div class="skill-progress"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <i class="fas fa-tools"></i>
+                  </div>
+                  <h3 class="skill-title">Troubleshooting</h3>
+                  <p class="skill-description">
+                    Competent in basic hardware and software troubleshooting,
+                    providing reliable IT support and technical assistance.
+                  </p>
+                  <div class="skill-level">
+                    <div class="skill-progress"></div>
+                  </div>
+                </div>
+      </div>
+    </section>
+
+    
+  </body>
+</html>
