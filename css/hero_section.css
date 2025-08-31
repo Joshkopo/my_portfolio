@@ -883,32 +883,6 @@ h2 {
     width: 150px;
   }
 }
-/* Heavy Smooth Scrolling */
-html {
-  scroll-behavior: auto; /* Disable default smooth scroll */
-}
-
-body {
-  overflow: hidden; /* Hide scrollbar for smooth effect */
-  height: 100vh;
-}
-
-/* Smooth scrolling container */
-.smooth-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.smooth-content {
-  pointer-events: auto;
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
-}
 
 /* Ensure nav stays on top */
 .nav-container {

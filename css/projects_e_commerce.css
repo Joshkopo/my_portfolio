@@ -289,14 +289,22 @@
   filter: invert(1);
 }
 .modal-body img {
-  width: 1500px;
-  max-width: 1500px;
-  max-height: 80vh; /* keep it responsive */
-  display: block; /* makes margin auto work */
-  margin: 0 auto; /* centers image horizontally */
+  width: 100%;
+  max-width: 1200px; /* limit on big screens */
+  height: auto;
+  max-height: 80vh; /* prevents overflow */
+  display: block;
+  margin: 0 auto;
   object-fit: contain;
   border-radius: 10px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 95% !important; /* make modal fit mobile */
+    margin: auto;
+  }
 }
 
 /* Keyframe Animations */
